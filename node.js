@@ -1,33 +1,33 @@
-const  alunos  =  [
+const alunos = [
 	{
-		nome : 'João' ,
-		nota : 5 ,
-		turma : '1B' ,
-	} ,
+		nome: 'João',
+		nota: 5,
+		turma: '1B',
+	},
 	{
-		nome : 'Sófia' ,
-		nota : 9 ,
-		turma : '1B' ,
-	} ,
+		nome: 'Sofia',
+		nota: 9,
+		turma: '1B',
+	},
 	{
-		nome : 'Paulo' ,
-		nota : 6 ,
-		turma : '2C' ,
-	} ,
-] ;
+		nome: 'Paulo',
+		nota: 6,
+		turma: '2C',
+	},
+];
 
-função  alunosAprovados ( alunos ,  mídia )  {
-	deixe  aprovados  =  [ ] ;
+function alunosAprovados(alunos, media) {
+	let aprovados = [];
 
-	for  ( let  i  =  0 ;  i  <  alunos . comprimento ;  i ++ )  {
-		let  { nota , nome }  =  alunos [ i ] ;
+	for (let i = 0; i < alunos.length; i++) {
+		let { nota, nome } = alunos[i];
 
-		if  ( nota  >=  mídia )  {
-			aprovados . empurrar ( nome ) ;
+		if (nota >= media) {
+			aprovados.push(nome);
 		}
 	}
 
-	 aprovados de retorno ;
+	return aprovados;
 }
 
-consola . log ( alunosAprovados ( alunos ,  5 ) ) ;
+console.log(alunosAprovados(alunos, 5));
